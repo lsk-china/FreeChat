@@ -100,6 +100,19 @@ import org.springframework.web.bind.annotation.RestController;
  *         "total_pages": <TOTAL PAGES>
  *     }
  * }
+ * 10. send friend request (client to server via ws)
+ * REQ:
+ * {
+ *     "dest_uid": <DEST UID>
+ * }
+ * RESP: NONE
+ * After this request, server saves the request to Redis, waiting for the dest user to confirm the request.
+ * If the dest user is NOT online, server sends the request to the client as soon as it gets online.
+ * The request expires in 1 day (86400 secs)
+ * 11. receive friend request (from server to client via ws)
+ * {
+ *     "from_uid": <FROM UID>
+ * }
  */
 @RestController("/api/message")
 public class MessagingController {
