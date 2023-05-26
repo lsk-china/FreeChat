@@ -8,14 +8,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 /**
- * Group and message binding table
+ * User friends
  */
 @Data
-@TableName("group_message")
+@TableName("friend")
 @NoArgsConstructor
 @AllArgsConstructor
-public class GroupMessage {
+public class Friend {
 
     /**
      * Record ID
@@ -25,14 +27,20 @@ public class GroupMessage {
     private Long id;
 
     /**
-     * Chat ID
+     * User ID
      */
-    @TableField("group_id")
-    private Long groupId;
+    @TableField("user_id")
+    private Long userId;
 
     /**
-     * Message ID
+     * Friend User ID
      */
-    @TableField("message_id")
-    private Long messageId;
+    @TableField("friend_id")
+    private Long friendId;
+
+    /**
+     * Time of two users become friends
+     */
+    @TableField("time")
+    private Date time;
 }

@@ -66,7 +66,8 @@ import org.springframework.web.bind.annotation.RestController;
  *     "code": 200 (Succeed) | 403 (Not Login) | 500 (Server Error),
  *     "message": Message in the brackets above,
  *     "data": {
- *         "image_id": <Image ID>
+ *         "image_id": <Image ID>,
+ *         "keep_forever": true | false
  *     }
  * }
  * 8. download an image (plain request)
