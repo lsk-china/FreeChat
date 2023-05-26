@@ -61,4 +61,11 @@ public class Message {
      */
     @TableField("is_undone")
     private Integer isUndone;
+
+    /**
+     * targetType
+     * Identifies whether the message is sent to a group (GROUP) or a chat (CHAT)
+     */
+    @TableField("target_type")
+    private String targetType;
 }
