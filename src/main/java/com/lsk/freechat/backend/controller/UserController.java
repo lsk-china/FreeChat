@@ -109,6 +109,7 @@ import org.springframework.web.bind.annotation.RestController;
  *     "message": Message in the brackets above,
  *     "data": {}
  * }
+ * A chat with the friend should be created after this request.
  * 9. delete friend
  * REQ:
  * {
@@ -120,6 +121,7 @@ import org.springframework.web.bind.annotation.RestController;
  *     "message": Message in the brackets above,
  *     "data": {}
  * }
+ * The chat with the friend should be deleted after this request.
  * 10. query chat list
  * REQ: None
  * RESP:

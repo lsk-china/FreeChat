@@ -113,6 +113,14 @@ import org.springframework.web.bind.annotation.RestController;
  * {
  *     "from_uid": <FROM UID>
  * }
+ * 12. add chat (server send to client via ws)
+ * {
+ *     "chat_id": <CHAT ID>
+ * }
+ * 13. add group (server send to client via ws)
+ * {
+ *     "group_id" <GROUP ID>
+ * }
  */
 @RestController("/api/message")
 public class MessagingController {
