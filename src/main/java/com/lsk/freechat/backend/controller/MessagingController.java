@@ -6,31 +6,16 @@ import org.springframework.web.bind.annotation.RestController;
  * MessagingController
  * Implement APIs about messaging
  * 1. send message (client send to server via WS)
- * REQ:
- * {
- *     "message": <MESSAGE STRUCTURE>
- * }
- * RESP:
- * {
- *     "code": 200 (Succeed) | 400 (Invalid Message Structure) | 403 (Not Login) | 404 (Target Not Found) | 405 (At User Not Found) | 406 (Resource Not Found) | 407 (User Have No Permission To Perform This Request) | 500 (Server Error),
- *     "message": Message in the brackets above,
- *     "data": {}
- * }
+ * REQ: <MESSAGE STRUCTURE>
  * 2. receive message (send to client via WS)
  * {
- *     "message": <MESSAGE STRUCTURE>
+ *     <MESSAGE STRUCTURE>
  * }
  * Client needn't give a response.
  * 3. request undo message (client send to server via WS)
  * REQ:
  * {
  *     "message_id": <MESSAGE ID>
- * }
- * RESP:
- * {
- *     "code": 200 (Succeed) | 403 (Not Login) | 404 (Message Not Found) | 407 (User Have No Permission To Perform This Request),
- *     "message": Message in the brackets above,
- *     "data": {}
  * }
  * 4. undo message broadcast (server send to client via WS)
  * {
