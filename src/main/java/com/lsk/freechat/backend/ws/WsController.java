@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * WsController
@@ -43,7 +45,15 @@ public class WsController {
         }
 
         // 2. construct message structure from the data send by client
+        // TODO: validate type, replies, at
+        com.lsk.freechat.backend.model.Message msg = new com.lsk.freechat.backend.model.Message();
+        Map<String, Object> realContent = new HashMap<>();
+        realContent.put("content", message.getContent());
+        realContent.put("at", message.getAtUserId());
+        realContent.put("type", message.getType());
+        realContent.put("replies", message.getReplies());
 
+        // 3.
     }
 
 
